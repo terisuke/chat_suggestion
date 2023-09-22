@@ -5,10 +5,11 @@ publish_to: 'none'
 version: 1.0.0+1
  
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^5.0.0
     
   cupertino_icons: ^1.0.2
   flutter_riverpod: ^2.0.2
@@ -23,16 +24,16 @@ dependencies:
   url_launcher: ^6.0.20
   clipboard: ^0.1.3
   flutter_launcher_icons: ^0.13.0
-  flash: ^2.0.3+1
+  flash: ^3.0.5+1
   uuid: ^3.0.5
   image_picker: ^0.8.4+11
   flutter_svg: ^2.0.5
   firebase_storage: ^11.1.0
   firebase_crashlytics: ^3.1.0
   fluttertoast: ^8.0.9
-  material_floating_search_bar: ^0.3.7
+  material_floating_search_bar_2: ^0.5.0
   http: ^0.13.5
-  flutter_dotenv: ^5.0.2
+  flutter_dotenv: 
   algolia: ^1.1.1
   freezed_annotation: ^2.1.0
  
@@ -52,27 +53,6 @@ dependency_overrides:
    intl: ^0.18.0-nullsafety.2
 
 flutter:
-  fonts:
-   - family: Murecho
-     fonts:
-       - asset: assets/fonts/Murecho/static/Murecho-Thin.ttf
-         weight: 100
-       - asset: assets/fonts/Murecho/static/Murecho-ExtraLight.ttf
-         weight: 200
-       - asset: assets/fonts/Murecho/static/Murecho-Light.ttf
-         weight: 300
-       - asset: assets/fonts/Murecho/static/Murecho-Regular.ttf
-         weight: 400
-       - asset: assets/fonts/Murecho/static/Murecho-Medium.ttf
-         weight: 500
-       - asset: assets/fonts/Murecho/static/Murecho-SemiBold.ttf
-         weight: 600
-       - asset: assets/fonts/Murecho/static/Murecho-Bold.ttf
-         weight: 700
-       - asset: assets/fonts/Murecho/static/Murecho-ExtraBold.ttf
-         weight: 800
-       - asset: assets/fonts/Murecho/static/Murecho-Black.ttf
-         weight: 900
   generate: true
   uses-material-design: true
   assets:
