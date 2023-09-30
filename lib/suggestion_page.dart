@@ -43,6 +43,17 @@ class _TweetSuggestionPageState extends State<TweetSuggestionPage> {
                 child: Text('Generate Suggestion'),
               ),
               SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () async {
+                  final revisedText =
+                      await chatAPI.requestRevisionAPI(_controller.text);
+                  setState(() {
+                    suggestionText = revisedText;
+                  });
+                },
+                child: Text('Revise Text'),
+              ),
+              SizedBox(height: 16),
               if (suggestionText != null)
                 GestureDetector(
                   onTap: () {
@@ -51,9 +62,10 @@ class _TweetSuggestionPageState extends State<TweetSuggestionPage> {
                   child: Text(
                     suggestionText!,
                     style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue), // テキストカラーを変更してクリック可能であることを示します
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
                   ),
                 ),
             ],
